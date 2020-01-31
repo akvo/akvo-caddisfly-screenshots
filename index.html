@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Akvo Caddisfly - Instructions</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css?v=8">
+    <script>
+        var currentIndex = 8;
+        var pageCountArray = [
+            ["app", 6],
+            ["1b7db640037c", 7],
+            ["420551851acd", 7],
+            ["321bbbd9876b", 8],
+            ["cc7349dc8fa9", 14],
+            ["18f78e67aa09", 14],
+            ["2394f9a54050", 10],
+            ["933d32d3972c", 10],
+            ["ac33b44f9992", 11],
+            ["32d9b8f4aecf", 11],
+            ["71e4c7cd2280", 8],
+            ["411a4093f6b6", 10],
+            ["aa4a4e3100c9", 7],
+            ["6843158b47b4", 7],
+            ["d555f04db952", 8],
+            ["6ed8142b6b07", 7],
+            ["798b81d2b019", 8],
+            ["ac3b4d9c9599", 14],
+            ["fe26af2621a7", 7],
+            ["55f97cd99083", 11],
+            ["1b5c6ca28111", 7],
+            ["e3bde46bdcff", 10],
+            ["4c5cbcf6b1c1", 8],
+            ["46459783c2d3", 8],
+            ["f9c88cfe97d2", 10],
+            ["77ffa76fbad8", 9],
+            ["3a658167cc9f", 9],
+            ["adb5c13b1be9", 14],
+            ["5f6a1f949c8f", 13],
+            ["c0463db03a90", 13],
+            ["c3f4a96352d4", 9],
+            ["58472d61fe5e", 10],
+            ["6431b8d3b088", 12],
+            ["ffd15786c8c3", 9],
+            ["313b26ca8b54", 12],
+            ["6f37f6f56af1", 9],
+            ["60c2a8f2f711", 12],
+            ["1fee29ebb460", 9],
+            ["0bfe7f37779d", 12],
+            ["5167d31c2f9e", 8],
+            ["ad0e52a77be2", 12],
+            ["cfb2ea45aabc", 8],
+            ["d2379c0f7d6d", 18],
+            ["e2ccb417bd7b", 10],
+            ["5a3d490d9df3", 14],
+            ["59cc2d3153b9", 12],
+            ["9991fb84dd90", 12],
+            ["606b771e0ffe", 12],
+            ["1dfdf7533b50", 12],
+            ["b5c608bf86e4", 12],
+            ["6060e4dbe59d", 8],
+            ["de40aa126a24", 11],
+            ["e14626afa5b0", 9],
+            ["09ec2eb8f500", 8],
+            ["49e308b0f9b4", 8],
+            ["383b1b9b7026", 8],
+            ["c52c50fb2279", 8],
+            ["2e12e0d2d46b", 11],
+            ["00adc1e5fa0b", 8],
+            ["fc8a5b3af672", 10],
+            ["7d0685b49370", 9],
+            ["a444a7fbd36f", 9],
+            ["cc25d617725d", 14],
+            ["25bf2b8b12aa", 10],
+            ["e71c27a3dd60", 8],
+            ["efd899d7f484", 8],
+            ["a824d0b00f7c", 9],
+            ["f24ff0422bd3", 9],
+            ["7c0ab18efe43", 8],
+            ["1f3f24b85b6c", 8],
+            ["68444b1ec0df", 8],
+            ["f07cd94f018e", 8],
+            ["0b6a8db0a493", 8],
+            ["73f866e8d1ac", 12],
+            ["d96ff081e629", 8],
+            ["e3f40dea8c29", 8],
+            ["5977bf505ffb", 8],
+            ["37404537d819", 9],
+            ["bb0ec47e2007", 8],
+            ["1d3ae0c1651d", 12],
+            ["fcdae725a518", 6],
+            ["57a6ced96c17", 5],
+            ["3752f1af4519", 5],
+            ["17d86047d7c4", 10],
+            ["a32a4a821d42", 10],
+            ["340d80c7833e", 10],
+            ["a885cd2180fa", 11],
+            ["a9773fd1de64", 11],
+            ["cd66ecab2794", 15],
+            ["79586d9319c8", 15],
+            ["5c79e970402d", 12],
+            ["ddf381223a3b", 10],
+            ["ffe95e0c3fad", 10],
+            ["0de4bd9a8243", 10],
+            ["6add5d36b6a3", 11],
+            ["883bf6e9ff63", 17],
+            ["9abfd8788c66", 10],
+            ["65bd28a52df0", 10],
+            ["adc7ce5a4348", 10],
+            ["52cd7f2938b0", 11],
+            ["569c34f5fc54", 10],
+            ["4fb1cc6c12c6", 12],
+            ["ed4db0fd3386", 15],
+            ["4bfd645c26cf", 16],
+            ["bf80d7197176", 18],
+            ["ac22c9afa0ab", 18]
+        ];
+
+        function nextPage() {
+            if (currentIndex < pageCountArray.length - 1) {
+                currentIndex++;
+                item = pageCountArray[currentIndex][0];
+                pageCount = pageCountArray[currentIndex][1];
+                addTags(item, pageCount)
+            }
+        }
+
+        function prevPage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                item = pageCountArray[currentIndex][0];
+                pageCount = pageCountArray[currentIndex][1];
+                addTags(item, pageCount)
+            }
+        }
+
+        function addTags(item, pageCount) {
+
+            var htmlEn = '';
+            var htmlEs = '';
+            var htmlFr = '';
+            var htmlIn = '';
+
+            for (var index = 0; index < pageCount; index++) {
+                htmlEn += '<img src="english/' + item + '-en-' + index.toString().padStart(2, '0') + '.png">';
+                htmlFr += '<img src="french/' + item + '-fr-' + index.toString().padStart(2, '0') + '.png">';
+                htmlEs += '<img src="spanish/' + item + '-es-' + index.toString().padStart(2, '0') + '.png">';
+            }
+
+            document.getElementById("screenshots-en").innerHTML = htmlEn;
+            document.getElementById("screenshots-fr").innerHTML = htmlFr;
+            document.getElementById("screenshots-es").innerHTML = htmlEs;
+
+            document.getElementById("screenshots-en").style.width = (pageCount * 256) + "px"
+            document.getElementById("screenshots-fr").style.width = (pageCount * 256) + "px"
+            document.getElementById("screenshots-es").style.width = (pageCount * 256) + "px"
+
+            window.history.replaceState('', item, '?id=' + item);
+
+            window.scrollTo(0, 0);
+        }
+
+        function loadTestType(item) {
+
+            var pageCount = 0;
+            for (var index = 0; index < pageCountArray.length; index++) {
+                var element = pageCountArray[index];
+                if (element[0] == item) {
+                    currentIndex = index;
+                    pageCount = element[1];
+                    break;
+                }
+            }
+
+            addTags(item, pageCount);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="menu-top">
+        <div id="menu-wrapper">
+            <ul class="nav">
+                <!-- <li><span>Sensors</span>
+                    <div class="container-1">
+                        <ul>
+                            <li><span onclick="loadTestType('f32b4257dfaf')">Electrical Conductivity</span></li>
+                            <li><span onclick="loadTestType('c4626582cca6')">Moisture</span></li>
+                            <li><span onclick="loadTestType('ab328eefcd14')">Electrical Conductivity</span></li>
+                        </ul>
+                    </div>
+                </li> -->
+                <li><span>App</span>
+                    <div class="container-1">
+                        <ul>
+                            <li><span onclick="loadTestType('app')">App Navigation</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><span>Striptest</span>
+                    <div class="container-3">
+                        <div class="col1">
+                            <h3>Soil</h3>
+                            <ul>
+                                <li><span onclick="loadTestType('1b7db640037c')">Soil - Nitrogen</span></li>
+                                <li><span onclick="loadTestType('420551851acd')">Soil - pH</span></li>
+                                <li><span onclick="loadTestType('321bbbd9876b')">Soil - pH (0 - 14)</span></li>
+                                <li><span onclick="loadTestType('cc7349dc8fa9')">Soil - Phosphate</span></li>
+                                <li><span onclick="loadTestType('18f78e67aa09')">Soil - Phosphorous</span></li>
+                                <li><span onclick="loadTestType('2394f9a54050')">Soil - Potassium</span></li>
+                            </ul>
+                        </div>
+                        <div class="col1">
+                            <h3>Water</h3>
+                            <ul>
+                                <li><span onclick="loadTestType('933d32d3972c')">Water - Ammonium</span></li>
+                                <li><span onclick="loadTestType('ac33b44f9992')">Water - Arsenic (0 - 4000)</span></li>
+                                <li><span onclick="loadTestType('32d9b8f4aecf')">Water - Arsenic (0 - 500)</span></li>
+                                <li><span onclick="loadTestType('71e4c7cd2280')">Water - Chloride</span></li>
+                                <li><span onclick="loadTestType('411a4093f6b6')">Water - Chlorine, Hardness, Alkalinity, pH</span></li>
+                                <li><span onclick="loadTestType('aa4a4e3100c9')">Water - Mercury</span></li>
+                                <li><span onclick="loadTestType('6843158b47b4')">Water - Nitrate - N & Nitrite - N</span></li>
+                            </ul>
+                        </div>
+                        <div class="col1">
+                            <ul>
+                                <li><span onclick="loadTestType('d555f04db952')">Water - Nitrate 100</span></li>
+                                <li><span onclick="loadTestType('6ed8142b6b07')">Water - pH</span></li>
+                                <li><span onclick="loadTestType('798b81d2b019')">Water - pH (0 - 14)</span></li>
+                                <li><span onclick="loadTestType('ac3b4d9c9599')">Water - Phosphate</span></li>
+                                <li><span onclick="loadTestType('fe26af2621a7')">Water - Phosphate</span></li>
+                                <li><span onclick="loadTestType('55f97cd99083')">Water - Potassium</span></li>
+                                <li><span onclick="loadTestType('1b5c6ca28111')">Water - Total & Free Chlorine</span></li>
+                                <li><span onclick="loadTestType('e3bde46bdcff')">Water - Total Iron</span></li>
+                                <li><span onclick="loadTestType('4c5cbcf6b1c1')">Water - Total Iron</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><span>MD610</span>
+                    <div class="container-4">
+                        <div class="col1">
+                            <ul>
+                                <li><span onclick="loadTestType('46459783c2d3')">30. Alkalinity-m</span></li>
+                                <li><span onclick="loadTestType('f9c88cfe97d2')">31. Alkalinity-m HR</span></li>
+                                <li><span onclick="loadTestType('77ffa76fbad8')">40. Aluminium</span></li>
+                                <li><span onclick="loadTestType('3a658167cc9f')">60. Ammonia</span></li>
+                                <li><span onclick="loadTestType('adb5c13b1be9')">62. Ammonia</span></li>
+                                <li><span onclick="loadTestType('5f6a1f949c8f')">65. Ammonia LR</span></li>
+                                <li><span onclick="loadTestType('c0463db03a90')">66. Ammonia HR</span></li>
+                                <li><span onclick="loadTestType('c3f4a96352d4')">90. Chloride</span></li>
+                                <li><span onclick="loadTestType('58472d61fe5e')">92. Chloride</span></li>
+                                <li><span onclick="loadTestType('6431b8d3b088')">100. Total, Free and Comb...</span></li>
+                                <li><span onclick="loadTestType('ffd15786c8c3')">100. Free Chlorine</span></li>
+                                <li><span onclick="loadTestType('313b26ca8b54')">101. Total, Free and Comb...</span></li>
+                                <li><span onclick="loadTestType('6f37f6f56af1')">101. Free Chlorine</span></li>
+                                <li><span onclick="loadTestType('60c2a8f2f711')">103. Total, Free and Comb...</span></li>
+                            </ul>
+                        </div>
+                        <div class="col1">
+                            <ul>
+                                <li><span onclick="loadTestType('1fee29ebb460')">103. Free Chlorine HR</span></li>
+                                <li><span onclick="loadTestType('0bfe7f37779d')">110. Total, Free and Comb...</span></li>
+                                <li><span onclick="loadTestType('5167d31c2f9e')">110. Free Chlorine</span></li>
+                                <li><span onclick="loadTestType('ad0e52a77be2')">111. Total, Free and Comb...</span></li>
+                                <li><span onclick="loadTestType('cfb2ea45aabc')">111. Free Chlorine HR</span></li>
+                                <li><span onclick="loadTestType('d2379c0f7d6d')">125. Chromium (VI, III, T...</span></li>
+                                <li><span onclick="loadTestType('e2ccb417bd7b')">125. Chromium (VI)</span></li>
+                                <li><span onclick="loadTestType('5a3d490d9df3')">125. Total Chromium (III+...</span></li>
+                                <li><span onclick="loadTestType('59cc2d3153b9')">130. COD LR</span></li>
+                                <li><span onclick="loadTestType('9991fb84dd90')">131. COD MR</span></li>
+                                <li><span onclick="loadTestType('606b771e0ffe')">132. COD HR</span></li>
+                                <li><span onclick="loadTestType('1dfdf7533b50')">150. Copper</span></li>
+                                <li><span onclick="loadTestType('b5c608bf86e4')">157. Cyanide</span></li>
+                                <li><span onclick="loadTestType('6060e4dbe59d')">170. Fluoride</span></li>
+                            </ul>
+                        </div>
+                        <div class="col1">
+                            <ul>
+                                <li><span onclick="loadTestType('de40aa126a24')">190. Calcium Hardness</span></li>
+                                <li><span onclick="loadTestType('e14626afa5b0')">191. Calcium Hardness</span></li>
+                                <li><span onclick="loadTestType('09ec2eb8f500')">200. Total Hardness</span></li>
+                                <li><span onclick="loadTestType('49e308b0f9b4')">201. Total Hardness HR</span></li>
+                                <li><span onclick="loadTestType('383b1b9b7026')">220. Iron</span></li>
+                                <li><span onclick="loadTestType('c52c50fb2279')">222. Iron</span></li>
+                                <li><span onclick="loadTestType('2e12e0d2d46b')">223. Total Iron</span></li>
+                                <li><span onclick="loadTestType('00adc1e5fa0b')">225. Iron LR</span></li>
+                                <li><span onclick="loadTestType('fc8a5b3af672')">227. Iron HR</span></li>
+                                <li><span onclick="loadTestType('7d0685b49370')">240. Manganese</span></li>
+                                <li><span onclick="loadTestType('a444a7fbd36f')">257. Nickel</span></li>
+                                <li><span onclick="loadTestType('25bf2b8b12aa')">265. Nitrate</span></li>
+                                <li><span onclick="loadTestType('cc25d617725d')">260. Nitrate</span></li>
+                                <li><span onclick="loadTestType('e71c27a3dd60')">270. Nitrite</span></li>
+                                <li><span onclick="loadTestType('efd899d7f484')">272. Nitrite LR</span></li>
+                            </ul>
+                        </div>
+                        <div class="col1">
+                            <ul>
+                                <li><span onclick="loadTestType('a824d0b00f7c')">320. Phosphate (ortho) LR</span></li>
+                                <li><span onclick="loadTestType('f24ff0422bd3')">321. Phosphate (ortho) HR</span></li>
+                                <li><span onclick="loadTestType('7c0ab18efe43')">323. Phosphate (ortho)</span></li>
+                                <li><span onclick="loadTestType('73f866e8d1ac')">335. Phosphate HR</span></li>
+                                <li><span onclick="loadTestType('1f3f24b85b6c')">329. pH</span></li>
+                                <li><span onclick="loadTestType('68444b1ec0df')">330. pH</span></li>
+                                <li><span onclick="loadTestType('f07cd94f018e')">331. pH</span></li>
+                                <li><span onclick="loadTestType('0b6a8db0a493')">332. pH</span></li>
+                                <li><span onclick="loadTestType('d96ff081e629')">340. Potassium</span></li>
+                                <li><span onclick="loadTestType('e3f40dea8c29')">355. Sulfate</span></li>
+                                <li><span onclick="loadTestType('5977bf505ffb')">360. Sulfate</span></li>
+                                <li><span onclick="loadTestType('37404537d819')">384. Suspended Solids</span></li>
+                                <li><span onclick="loadTestType('bb0ec47e2007')">386. Turbidity</span></li>
+                                <li><span onclick="loadTestType('1d3ae0c1651d')">400. Zinc</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><span>Manual</span>
+                    <div class="container-1">
+                        <ul>
+                            <li><span onclick="loadTestType('fcdae725a518')">Lovibond SD 50 pH meter</span></li>
+                            <li><span onclick="loadTestType('57a6ced96c17')">Lovibond SD 70 EC meter</span></li>
+                            <li><span onclick="loadTestType('3752f1af4519')">DelAgua Turbidity Tube</span></li>
+                            <li><span onclick="loadTestType('17d86047d7c4')">Tester - Chlorine, pH</span></li>
+                            <li><span onclick="loadTestType('a32a4a821d42')">Tester - Chlorine, pH</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><span>Checkit</span>
+                    <div class="container-2">
+                        <div class="col1">
+                            <ul>
+                                <li><span onclick="loadTestType('340d80c7833e')">Water - Alkalinity Total M</span></li>
+                                <li><span onclick="loadTestType('a885cd2180fa')">Water - Aluminium</span></li>
+                                <li><span onclick="loadTestType('a9773fd1de64')">Water - Ammonia</span></li>
+                                <li><span onclick="loadTestType('cd66ecab2794')">Water - Chlorine</span></li>
+                                <li><span onclick="loadTestType('79586d9319c8')">Water - Chlorine</span></li>
+                                <li><span onclick="loadTestType('5c79e970402d')">Water - Copper</span></li>
+                                <li><span onclick="loadTestType('ddf381223a3b')">Water - Fluoride</span></li>
+                                <li><span onclick="loadTestType('ffe95e0c3fad')">Water - Iron</span></li>
+                                <li><span onclick="loadTestType('0de4bd9a8243')">Water - Iron</span></li>
+                            </ul>
+                        </div>
+                        <div class="col1">
+                            <ul>
+                                <li><span onclick="loadTestType('6add5d36b6a3')">Water - Manganese</span></li>
+                                <li><span onclick="loadTestType('883bf6e9ff63')">Water - Nitrate</span></li>
+                                <li><span onclick="loadTestType('9abfd8788c66')">Water - Nitrite</span></li>
+                                <li><span onclick="loadTestType('65bd28a52df0')">Water - pH</span></li>
+                                <li><span onclick="loadTestType('adc7ce5a4348')">Water - Phosphate</span></li>
+                                <li><span onclick="loadTestType('52cd7f2938b0')">Water - Phosphate</span></li>
+                                <li><span onclick="loadTestType('569c34f5fc54')">Water - Phosphate</span></li>
+                                <li><span onclick="loadTestType('4fb1cc6c12c6')">Water - Zinc</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><span>Coliform</span>
+                    <div class="container-1">
+                        <ul>
+                            <li><span onclick="loadTestType('ed4db0fd3386')">E.coli</span></li>
+                            <li><span onclick="loadTestType('4bfd645c26cf')">E.coli - Dilution</span></li>
+                            <li><span onclick="loadTestType('bf80d7197176')">E.coli + TC</span></li>
+                            <li><span onclick="loadTestType('ac22c9afa0ab')">E.coli + TC - Dilution</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="button">
+                    <span onclick="prevPage()">Prev</span>
+                </li>
+                <li class="button">
+                    <span onclick="nextPage()">Next</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="screenshots-en" class="page section1"></div>
+    <div id="screenshots-es" class="page"></div>
+    <div id="screenshots-fr" class="page"></div>
+    <!-- <div id="screenshots-in" class="page"></div> -->
+</body>
+
+<script>
+    var searchParams = new URLSearchParams(window.location.search);
+
+    var id = searchParams.get("id");
+    if (!id) {
+        id = 'app';
+    }
+    loadTestType(id);
+</script>
+
+</html>
